@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Ruslan+Display&display=swap');
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: silver;
+    color: red;
+}
+
+h1 {
+    font-family: 'Ruslan Display', cursive;
+    font-size: 250%;
+}
+
+.image {
+    margin: 4px;
+    height:50px;
+    width: 50px;
+}
