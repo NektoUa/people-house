@@ -1,7 +1,45 @@
 .App {
   text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-areas: 
+  "header header header"
+  "nav begin contact"
+  "footer footer footer"
 }
 
+#header {
+  grid-area:header;
+}
 
+#nav {
+  grid-area: nav;
+}
+
+#begin {
+  grid-area: begin;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+@media (max-width: 700px) {
+  .App {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header "
+    "nav "
+    "begin "
+    "contact"
+    "footer "
+  }
+}
 
 

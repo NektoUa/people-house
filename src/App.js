@@ -1,35 +1,27 @@
 import React, { Component } from 'react';
-import Nav from './components/nav/Nav'
-import logo from './logo.svg';
+import Header from './components/header/Header'
+import Navigation from './components/navigation/Navigation'
+// import Literature from './components/literature/Literature'
+import History from './components/History/History'
+import Contact from './components/contacts/Contact'
+import Footer from './components/footer/Footer'
+import about from './components/History/about'
+import book from "./components/literature/book";
+
 import './App.css';
 
 class App extends Component {
   render() {
+    console.log(book)
     return (
       <div className="App" >
-        <Nav />
-        <p>Never mind where are you from</p>
-        <header className="App-header">
-          <p>!1! Never mind where are you from</p>
-          <h2>
+        <Header />
+        <Navigation />
+        <History historia={about} />
+        {/* <Literature bk={book} /> */}
+        <Contact />
+        <Footer />
 
-          </h2>
-          <img src={logo} class="App-logo" alt="logo" />
-
-          <br />
-
-          <p>
-            Edit code <code>src/App.js</code> and save to reload.
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
       </div>
     );
   }
