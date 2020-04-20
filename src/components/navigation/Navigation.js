@@ -9,7 +9,7 @@ class Navigation extends Component {
         }
     }
     fun = () => {
-        if (this.state.title == "navicProGarmin") {
+        if (this.state.title === "navicProGarmin") {
             this.setState({ title: "hide" });
         } else {
             this.setState({ title: "navicProGarmin" });

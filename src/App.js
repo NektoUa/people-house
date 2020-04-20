@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/header/Header'
 import Navigation from './components/navigation/Navigation'
 // import Literature from './components/literature/Literature'
-import History from './components/History/History'
+import ArticleList from './components/History/ArticleList'
 import Contact from './components/contacts/Contact'
 import Footer from './components/footer/Footer'
 import about from './components/History/about'
@@ -12,12 +12,11 @@ import './App.css';
 
 class App extends Component {
   render() {
-    console.log(book)
     return (
       <div className="App" >
         <Header />
         <Navigation />
-        <History historia={about} />
+        <ArticleList about={about} />
         {/* <Literature bk={book} /> */}
         <Contact />
         <Footer />
