@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from './components/header/Header'
 import Navigation from './components/navigation/Navigation'
-// import Literature from './components/literature/Literature'
-import ArticleList from './components/History/ArticleList'
+import Literature from './components/literature/Literature'
+// import ArticleList from './components/History/ArticleList'
+// import Lush from './components/lushenko #3/three'
 import Contact from './components/contacts/Contact'
 import Footer from './components/footer/Footer'
 import about from './components/History/about'
@@ -16,8 +17,9 @@ class App extends Component {
       <div className="App" >
         <Header />
         <Navigation />
-        <ArticleList about={about} />
-        {/* <Literature bk={book} /> */}
+        {/* <Lush /> */}
+        {/* <ArticleList about={about} /> */}
+        <Literature bk={book} />
         <Contact />
         <Footer />
 

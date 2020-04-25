@@ -8,6 +8,7 @@ export default function ArticleList({ about }) {
     return (
         <div>
             {info}
+
         </div>
     )
 }

@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import main from './Main.module.css';
+import Form from './form/form'
 
 
 class Literature extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "navicProGarmin",
-            show: "TrTrTr"
+            bk: this.props.bk,
         }
     }
-    // showForm = () => {
-    //     this.setState({ show: "hide" })
-    // }
+    handleAddBook = (data) => {
+        const nextBook = [data, ...this.state.bk]
+        this.setState({ bk: nextBook })
+    }
+
     render() {
-        const books = this.props.bk;
+        const books = this.state.bk;
         const bookList = books.map((elem) => {
             return <li key={elem.author}>{elem.author} {elem.title} / {elem.publish}. - {elem.year}</li>
         });
@@ -24,8 +26,7 @@ class Literature extends Component {
                 <ol>
                     {bookList}
                 </ol>
-                {/* <button type="button" onClick={showForm}>Додати</button> */}
-                <p>{this.state.show}</p>
+                <Form onAddBook={this.handleAddBook} />
             </div >
         );
     }
