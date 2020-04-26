@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import main from './Navigation.module.css';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
+import Begin from '../begin/Begin'
+import ArticleLiterature from '../literature/ArticleLiterature'
+import ArticleHistory from '../History/ArticleHistory'
 
 class Navigation extends Component {
     constructor(props) {
@@ -19,16 +23,25 @@ class Navigation extends Component {
     }
     render() {
         return (
-            <div className={main.nav} id="nav">
-                <h2 onClick={this.fun}>{this.state.title}</h2>
-                <a href='/begin'>Початкова</a>
-                <a href='/history'>Історія</a>
-                <a href='/about'>Опис об'єкта</a>
-                <a href='/about'>Креслення</a>
-                <a href='/literature'>Література</a>
+            <Router>
+                <div className={main.nav} id="nav">
+
+                    <NavLink to='/'>Початкова</NavLink>
+                    <NavLink to='/history'>Історія</NavLink>
+                    <NavLink to='/about'>Опис об'єкта</NavLink>
+                    <NavLink to='/draft'>Креслення</NavLink>
+                    <NavLink to='/literature'>Література</NavLink>
+                </div>
+                <div id='begin'>
+                    <Switch>
+                        <Route exact path='/' component={Begin}></Route>
+                        <Route exact path='/history' component={ArticleHistory}></Route>
+                        <Route exact path='/literature' component={ArticleLiterature}></Route>
+                    </Switch>
+                </div>
 
 
-            </div>
+            </Router>
         );
     }
 }
