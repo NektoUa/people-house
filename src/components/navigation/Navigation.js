@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import main from './Navigation.module.css';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
 import Begin from '../begin/Begin'
-import ArticleLiterature from '../literature/ArticleLiterature'
 import ArticleHistory from '../History/ArticleHistory'
+import About from '../about/About'
+import Draft from '../draft/Draft'
+import ArticleLiterature from '../literature/ArticleLiterature'
+
 
 class Navigation extends Component {
     constructor(props) {
@@ -36,12 +39,14 @@ class Navigation extends Component {
                     <Switch>
                         <Route exact path='/' component={Begin}></Route>
                         <Route exact path='/history' component={ArticleHistory}></Route>
+                        <Route exact path='/about' component={About}></Route>
+                        <Route exact path='/draft' component={Draft}></Route>
                         <Route exact path='/literature' component={ArticleLiterature}></Route>
                     </Switch>
                 </div>
 
 
-            </Router>
+            </Router >
         );
     }
 }
