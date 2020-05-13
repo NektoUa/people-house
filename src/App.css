@@ -43,6 +43,12 @@
   }
 }
 
+/* @media (max-width: 1600) {
+  body {
+      width: 70%;
+    }
+} */
+
 .leaflet-container {
   height: 300px;
   width: 300px;
@@ -61,3 +67,4 @@
    #topArrow:hover {
     opacity: 0.7;
    }
+

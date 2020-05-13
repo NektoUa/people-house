@@ -28,20 +28,21 @@ class Navigation extends Component {
         return (
             <Router>
                 <div className={main.nav} id="nav">
-
-                    <NavLink to='/'>Початкова</NavLink>
-                    <NavLink to='/history'>Історія</NavLink>
-                    <NavLink to='/about'>Опис об'єкта</NavLink>
-                    <NavLink to='/draft'>Креслення</NavLink>
-                    <NavLink to='/literature'>Література</NavLink>
+                    <ul >
+                        <li className={main.liNav}><NavLink to='/'>Початкова</NavLink></li>
+                        <li className={main.liNav}><NavLink to='/history'>Історія</NavLink></li>
+                        <li className={main.liNav}><NavLink to='/about'>Опис об'єкта</NavLink></li>
+                        <li className={main.liNav}><NavLink to='/draft' >Креслення</NavLink></li>
+                        <li className={main.liNav}><NavLink to='/literature'>Література</NavLink></li>
+                    </ul>
                 </div>
                 <div id='begin'>
                     <Switch>
-                        <Route exact path='/' component={Begin}></Route>
-                        <Route exact path='/history' component={ArticleHistory}></Route>
+                        <Route exact path='/' component={Begin} ><Begin /></Route>
+                        <Route exact path='/history' component={ArticleHistory} ><ArticleHistory about={this.props.about} /></Route>
                         <Route exact path='/about' component={About}></Route>
                         <Route exact path='/draft' component={Draft}></Route>
-                        <Route exact path='/literature' component={ArticleLiterature}></Route>
+                        <Route exact path='/literature' component={ArticleLiterature} ></Route>
                     </Switch>
                 </div>
 

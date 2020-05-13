@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
-        <Navigation />
+        <Navigation about={this.props.about} ap={this.props.ap} />
         <Contact />
         <Footer />
         <Arrow />

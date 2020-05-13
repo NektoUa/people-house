@@ -1,3 +1,25 @@
 .nav {
     background-color: springgreen;
 }
+
+.liNav {
+    
+list-style-type: none;
+margin: 0.5rem;
+}
+
+a { 
+    color:black;
+    text-decoration: none; 
+   } 
+
+a:hover {
+    color: white
+}
+
+@media (max-width: 700px) {
+    .liNav {
+        display: inline;
+    }
+}
+
