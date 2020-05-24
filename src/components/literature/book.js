@@ -20,4 +20,15 @@ const def = [{
     id: 56
 }]
 
+export let addBook = (author, title, publish, year) => {
+    let newBook = {
+        author: author,
+        title: title,
+        publish: publish,
+        year: year,
+        id: +new Date(),
+    }
+    def.push(newBook);
+}
+
 export default def

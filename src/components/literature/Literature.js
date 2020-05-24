@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import main from './Main.module.css';
 import Form from './form/form'
 
@@ -7,16 +8,19 @@ class Literature extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            bk: this.props.bk,
+            book: this.props.book,
+            // addBook: this.props.addBook
         }
     }
     handleAddBook = (data) => {
-        const nextBook = [data, ...this.state.bk]
-        this.setState({ bk: nextBook })
+        const nextBook = [...this.state.book, data]
+        // this.props.addBook(data)
+        this.setState({ book: nextBook })
+
     }
 
     render() {
-        const books = this.state.bk;
+        const books = this.state.book;
         const bookList = books.map((elem) => {
             return <li key={elem.author}>{elem.author} {elem.title} / {elem.publish}. - {elem.year}</li>
         });
@@ -26,7 +30,7 @@ class Literature extends Component {
                 <ol>
                     {bookList}
                 </ol>
-                <Form onAddBook={this.handleAddBook} />
+                <Form onAddBook={this.handleAddBook} addBook={this.props.addBook} />
             </div >
         );
     }

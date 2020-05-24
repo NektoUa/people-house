@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import about from './components/History/about'
+import about from './components/History/about';
+import book from './components/literature/book';
+import { addBook } from './components/literature/book';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App about={about} />
+    <App about={about} book={book} addBook={addBook} />
   </React.StrictMode>,
   document.getElementById('root')
 );

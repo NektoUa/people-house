@@ -5,7 +5,7 @@ import Begin from '../begin/Begin'
 import ArticleHistory from '../History/ArticleHistory'
 import About from '../about/About'
 import Draft from '../draft/Draft'
-import ArticleLiterature from '../literature/ArticleLiterature'
+import Literature from '../literature/Literature';
 
 
 class Navigation extends Component {
@@ -42,7 +42,7 @@ class Navigation extends Component {
                         <Route exact path='/history' component={ArticleHistory} ><ArticleHistory about={this.props.about} /></Route>
                         <Route exact path='/about' component={About}></Route>
                         <Route exact path='/draft' component={Draft}></Route>
-                        <Route exact path='/literature' component={ArticleLiterature} ></Route>
+                        <Route exact path='/literature' component={Literature} ><Literature book={this.props.book} addBook={this.props.addBook} /></Route>
                     </Switch>
                 </div>
 

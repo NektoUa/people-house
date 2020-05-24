@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import form from './Form.module.css';
 
 export default class Form extends Component {
@@ -19,7 +20,7 @@ export default class Form extends Component {
     }
     onBtnClickHandler = (e) => {
         e.preventDefault()
-        const { author, title, publish, year, id } = this.state
+        const { author, title, publish, year } = this.state
         this.props.onAddBook({
             id: +new Date(),
             author,
