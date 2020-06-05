@@ -7,11 +7,13 @@ import photoTwo from './images/2.jpg'
 import photoThree from './images/3.jpg'
 import photoFour from './images/4.jpg'
 import photoFive from './images/5.jpg'
+import main from './Draft.module.css';
 
 export default class Draft extends Component {
     render() {
         const Slider = (
             <AwesomeSlider
+                className={main.slider}
                 animation="foldOutAnimation"
                 cssModule={[CoreStyles, AnimationStyles]}
             >
@@ -23,7 +25,7 @@ export default class Draft extends Component {
             </AwesomeSlider>
         );
         return (
-            <div>
+            <div className={main.draft} >
                 {Slider}
             </div>
         )

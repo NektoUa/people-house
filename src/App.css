@@ -1,11 +1,12 @@
 .App {
   text-align: left;
   display: grid;
-  grid-template-columns: 1fr 4fr 2fr;
-  grid-template-areas: 
+  min-height: 100%;
+   grid-template-columns: 1fr 4fr 2fr;
+   grid-template-areas: 
   "header header header"
   "nav begin contact"
-  "footer footer footer"
+  "footer footer footer";
 }
 
 #header {

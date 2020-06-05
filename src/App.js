@@ -10,7 +10,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App" >
+      <div className="App container" >
         <Header />
         <Navigation about={this.props.about} ap={this.props.ap} book={this.props.book} addBook={this.props.addBook} />
         <Contact />
