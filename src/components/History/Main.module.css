@@ -1,0 +1,48 @@
+.text {
+    padding: 5px 10px 0px 10px;
+    text-align: justify;
+}
+
+.button {
+    display: inline-block;
+    text-shadow: 1px 1px #fff;
+    text-decoration: none;
+    padding: .1em 0.5em;
+    border: 0.5px solid #aaa;
+    border-radius: 10px;
+    outline: none;
+    background: #f3f5e9 no-repeat;
+    background-image:
+     linear-gradient(to left, #aaa, #aaa),
+     /* linear-gradient(to left, #feffe8, #feffe8), */
+     linear-gradient(#feffe8, #d6dbbf);
+    /* background-position: calc(100% - 2.7em) 0, calc(100% - 2.7em + 1px) 0, 0 0; */
+    background-size: 1px 100%, 1px 100%, auto auto;
+    overflow: hidden;
+  }
+  .button:after {
+    content: "\bb";
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    font-family: "Times","Times New Roman","serif","sans-serif","EmojiSymbols";
+    font-weight: 700;
+    font-size: 140%;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .button:hover {
+        background-color: #fdfd9f;
+    background-image:
+     linear-gradient(to left, #aaa, #aaa),
+     /* linear-gradient(to left, #feffe8, #feffe8), */
+     linear-gradient(#fffce7, #fdfd9f);
+  }
+  .button:active:after {
+    content: "\ab";
+    bottom: -1.2em;
+    transition: 3s;
+  }
+  

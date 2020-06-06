@@ -1,3 +1,10 @@
 .begin {
     background-color: peru;
+    padding: 10px;
+    text-align: justify;
+}
+
+.image {
+    height: 100%;
+       width: 100%;
 }
