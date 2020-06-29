@@ -1,7 +1,9 @@
 .App {
   text-align: left;
   display: grid;
-  min-height: 100%;
+  /* min-height: 100%; */
+  /* width: 50%; */
+  height: 100%;
    grid-template-columns: 1fr 4fr 2fr;
    grid-template-areas: 
   "header header header"

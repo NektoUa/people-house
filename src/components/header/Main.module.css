@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ruslan+Display&display=swap');
 
 .header {
+    padding: 10px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     background-color: silver;
